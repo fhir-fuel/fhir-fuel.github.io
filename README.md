@@ -7,7 +7,7 @@ and other JSON-like formats (yaml, avro, edn).
 
 ## Motivation
 
-Design of FHIR formats, to be honest, was essentially driven by XML and Object Oriented implementations. Not so much attention was given to design idiomatic JSON format. JSON and other JSON like formats like yaml, edn, avro are very popular in avantе-garde of programmers, some modern databases now could understad JSON as first-class data-structures, that’s why i think, good design for it is strictly required for FHIR adoption.
+Design of FHIR formats, to be honest, was essentially driven by XML and Object Oriented implementations. Not so much attention was given to design idiomatic JSON format. JSON and other JSON like formats like yaml, edn, avro are very popular in avantе-garde of programmers, some modern databases now could understad JSON as first-class data-structures, that’s why we think, good design for it is strictly required for FHIR adoption.
 
 ## TODO
 
