@@ -36,7 +36,7 @@ STD 90 (RFC 8259) , and is described using this format:
 
       // examples
       "string": "value"
-      "Coding": { "....""}
+      "Coding": { "...."}
    }
 
 }
