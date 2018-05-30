@@ -12,7 +12,7 @@ STD 90 (RFC 8259) , and is described using this format:
   "primitiveProperty" : {
      "<type>": <value>
      // example
-     "string": "<value>
+     "string": "<value>"
    },
    // references
    "reference": {
@@ -32,11 +32,11 @@ STD 90 (RFC 8259) , and is described using this format:
    //polymorphic/union types value[x]
    
    "value": {
-      "<type>": <value>
+      "<type>": "<value>"
 
       // examples
       "string": "value"
-      "Coding": {....}
+      "Coding": { "....""}
    }
 
 }
