@@ -5,7 +5,7 @@ This is proposal for second JSON representation format for FHIR Resources
 The JSON representation for a resource is based on the JSON format described in
 STD 90 (RFC 8259) , and is described using this format:
 
-```json
+```js
 {
   "resourceType" : "[Resource Type]",
   // primitives
@@ -132,7 +132,7 @@ that the process of parsing the resource is the same either way
 
 is represented in JSON like this:
 
-```json
+```js
 {
  "coding": [
    {
@@ -206,7 +206,7 @@ If the value has an id attribute, or extensions, then this is represented as fol
 
 is represented in JSON as:
 
-```json
+```js
  "birthDate": "1970-03-30",
  "_birthDate": {
    "id": "314159",
@@ -222,7 +222,7 @@ property with the _ is rendered.
 
 in JSON2
 
-```json
+```js
  "birthDate": {
    "dateTime": "1970-03-30"
    "extension": {"text": {"url":  "http://example.org/fhir/StructureDefinition/text"}}
@@ -308,7 +308,7 @@ member values, in the same manner as described for primitives. For example:
 
 is represented in JSON as:
 
-```json
+```js
 {
   "name" : [{
     "use" : "official" ,
@@ -327,7 +327,7 @@ is represented in JSON2 as:
 
 Things to note here are:
 
-```json
+```js
 {
   "name" : [{
     "use" : {"code": "official"},
