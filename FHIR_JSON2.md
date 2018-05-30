@@ -5,7 +5,7 @@ This is proposal for second JSON representation format for FHIR Resources
 The JSON representation for a resource is based on the JSON format described in
 STD 90 (RFC 8259) , and is described using this format:
 
-```
+```json
 {
   "resourceType" : "[Resource Type]",
   // primitives
@@ -129,6 +129,7 @@ that the process of parsing the resource is the same either way
    </coding>
  </code>
 ```
+
 is represented in JSON like this:
 
 ```json
@@ -195,16 +196,17 @@ https://github.com/jtobey/javascript-bignum ) to meet these requirements.
 
 If the value has an id attribute, or extensions, then this is represented as follows:
 
-'''xml
+```xml
  <birthDate id="314159" value="1970-03-30" >
    <extension url="http://example.org/fhir/StructureDefinition/text">
      <valueString value="Easter 1970"/>
    </extension>
  </birthDate>
-'''
+```
+
 is represented in JSON as:
 
-'''json
+```json
  "birthDate": "1970-03-30",
  "_birthDate": {
    "id": "314159",
@@ -213,20 +215,20 @@ is represented in JSON as:
       "valueString" : "Easter 1970"
    }]
  }
-'''
+```
 
 Note: If the primitive has an id attribute or extension, but no value, only the
 property with the _ is rendered.
 
 in JSON2
 
-'''json
+```json
  "birthDate": {
    "dateTime": "1970-03-30"
    "extension": {"text": {"url":  "http://example.org/fhir/StructureDefinition/text"}}
    "text": {"string": "Easter 1970"}
  }
-'''
+```
 
 Note: there is no `hacks` for extending primitives
 
